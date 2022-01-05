@@ -1,0 +1,28 @@
+{
+  "name": "@cadmium-images/rpc",
+  "version": "1.0.6",
+  "main": "dist/index.js",
+  "repository": "https://gitlab.com/cadmium-images/rpc",
+  "author": "crossliner <crosslinerdev@gmail.com>",
+  "license": "UNLICENCED",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsc && node dist/index.js",
+    "test": "tsc && node dist/test.js",
+    "prepublish": "npm run build",
+    "build": "tsc",
+    "deploy": "yarn publish --non-interactive"
+  },
+  "private": false,
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@msgpack/msgpack": "^2.7.1",
+    "leb128": "^0.0.5"
+  }
+}

@@ -1,0 +1,29 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id String @id @default(cuid())
+  discordId String?
+  accessKey String
+  accessible Boolean @default(true)
+  reason String?
+  createdOn DateTime @default(now()) 
+  invites Int @default(0)
+  createdInvites Invite[]
+}
+
+model Invite {
+  code String @unique
+  creator User? @relation(references: [id], fields: [creatorId])
+  creatorId String?
+  used Boolean @default(false)
+}

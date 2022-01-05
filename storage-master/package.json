@@ -1,0 +1,22 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://gitlab.com/cadmium-images/storage.git",
+  "author": "crossliner <crosslinerdev@gmail.com>",
+  "license": "UNLICENCED",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node dist/index.js"
+  },
+  "devDependencies": {
+    "@types/level": "^6.0.0",
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@cadmium-images/rpc": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "level": "^7.0.1"
+  }
+}
