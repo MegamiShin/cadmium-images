@@ -19,7 +19,7 @@
     "@cadmium-images/rpc": "^1.0.5",
     "dotenv": "^10.0.0",
     "fastify": "^3.24.0",
-    "fastify-multipart": "^5.1.0",
+    "fastify-multipart": "^5.3.1",
     "randomstring": "^1.2.1"
   }
 }
